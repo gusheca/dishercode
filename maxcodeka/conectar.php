@@ -9,36 +9,34 @@
   
   // Se recuperan valores de parametros
   $query_tmp="SELECT * FROM parametros WHERE indice=1";
-  $rs_tmp=mysqli_query($conexion,$query_tmp);
+  $rs_tmp=mysqli_fetch_array(mysqli_query($conexion,$query_tmp));
   
   // Variables para la numeracion de facturas
-  $numeracionfactura=mysql_result($rs_tmp,0,"numeracionfactura");
-/* 
-  $setnumfac=mysql_result($rs_tmp,0,"setnumfac");
-   
-  // Variables para impresion de Facturas y Guias de Despacho
-  $imagenfac=mysql_result($rs_tmp,0,"imagenfac");
-  $fondofac=mysql_result($rs_tmp,0,"fondofac");
-  $imagenguia=mysql_result($rs_tmp,0,"imagenguia");
-  $fondoguia=mysql_result($rs_tmp,0,"fondoguia");
-  $FilasDetalleFactura=mysql_result($rs_tmp,0,"filasdetallefactura");
-    
-  // Variables de Impuesto y Moneda
-  $ivaimp=mysql_result($rs_tmp,0,"ivaimp");
-  $nombremoneda=mysql_result($rs_tmp,0,"nombremoneda");
-  $simbolomoneda=mysql_result($rs_tmp,0,"simbolomoneda");
-  $codigomonedate=mysql_result($rs_tmp,0,"codigomoneda");
+  $numeracionfactura=$rs_tmp['numeracionfactura'];
+
+
+// Variables para impresion de Facturas y Guias de Despacho
+$imagenfac=$rs_tmp['imagenfac'];
+$fondofac=$rs_tmp['fondofac'];
+$imagenguia=$rs_tmp['imagenguia'];
+$fondoguia=$rs_tmp['fondoguia'];
+$FilasDetalleFactura=$rs_tmp['filasdetallefactura'];
   
-  // Personalización Empresa
-  $nomempresa=mysql_result($rs_tmp,0,"nomempresa");
-  $giro=mysql_result($rs_tmp,0,"giro");
-  $giro2=mysql_result($rs_tmp,0,"giro2");
-  $fonos=mysql_result($rs_tmp,0,"fonos");
-  $direccion=mysql_result($rs_tmp,0,"direccion");
-  $comuna=mysql_result($rs_tmp,0,"comuna");
-  $CiudadActual=mysql_result($rs_tmp,0,"ciudadactual");
-  $numerofiscal=mysql_result($rs_tmp,0,"numerofiscal");
-  $resolucionsii=mysql_result($rs_tmp,0,"resolucionsii");
-  $rutempresa=mysql_result($rs_tmp,0,"rutempresa");
-  */
+// Variables de Impuesto y Moneda
+$ivaimp=$rs_tmp['ivaimp'];
+$nombremoneda=$rs_tmp['nombremoneda'];
+$simbolomoneda=$rs_tmp['simbolomoneda'];
+$codigomonedate=$rs_tmp['codigomoneda'];
+
+// Personalizaciï¿½n Empresa
+$nomempresa=$rs_tmp['nomempresa'];
+$giro=$rs_tmp['giro'];
+$giro2=$rs_tmp['giro2'];
+$fonos=$rs_tmp['fonos'];
+$direccion=$rs_tmp['direccion'];
+$comuna=$rs_tmp['comuna'];
+$CiudadActual=$rs_tmp['ciudadactual'];
+$numerofiscal=$rs_tmp['numerofiscal'];
+$resolucionsii=$rs_tmp['resolucionsii'];
+$rutempresa=$rs_tmp['rutempresa'];
 ?>
